@@ -34,7 +34,7 @@ resumen.push(dni)
 const ig = prompt("Ingresá tu Instagram")
 resumen.push(ig)
 //Teléfono
-const telefono = prompt("Ingresá tu celular")
+const telefono = Number(prompt("Ingresá tu celular"))
 resumen.push(telefono)
 //Canal de venta
 function mostrarCanales() {
@@ -44,10 +44,12 @@ function mostrarCanales() {
         });
     return canalVenta;
 }
-const canal = prompt(mostrarCanales())
+
+const selectorCanales = prompt(mostrarCanales()) -1;
+const canal = canales[selectorCanales].nombre
 resumen.push(canal);
 
-//País 1-argentina 2-bolivia 3-brasil 4-chile 5-paraguay 6-uruguay
+//Paísi
 function mostrarPaises() {
     let paisElegido = "¿De dónde sos?(ingresá su número):\n";
     paises.forEach((paises) => {
@@ -55,21 +57,24 @@ function mostrarPaises() {
     });
     return paisElegido;
 }
-const pais = prompt(mostrarPaises())
-resumen.push(pais)
+const selectorPais = prompt(mostrarPaises()) -1;
+const pais = paises[selectorPais].nombre;
+resumen.push(pais);
 
 //Mensaje 
 const mensaje = prompt("Dejanos un comentario...")
 resumen.push(mensaje)
 
 //Finalizar
-console.log(resumen)
-//console.log("que bueno que te quieras sumar a nuestra familia ")
+const fin = confirm("gracias por completar el formulario! Nos estaremos poniendo en contacto a la brevedad")
 
-/* console.log(`Que bueno que te quieras sumar a nuestra familia 
-     ${resumen.nombre} +${resumen.apellido}. Esperamos haber tomado nota correctamente..
-    Tu DNI es: ${resumen.dni}
-   Tu Instagram es: ${resumen.ig}
-    Tu celular es: ${resumen.telefono}
-    El canal de venta elegido es ${resumen.canal} `
- ) */
+//console.log(resumen)
+console.log(`Que bueno que te quieras sumar a nuestra familia ${nombre} ${apellido}.\n 
+    Esperamos haber tomado nota correctamente..\n
+    DNI: ${dni}\n
+    Instagram: ${ig}\n
+    Celular: ${telefono}\n
+    Canal de venta elegido: ${canal}\n 
+    País: ${pais}\n
+    Mensaje: ${mensaje}\n`
+ )
