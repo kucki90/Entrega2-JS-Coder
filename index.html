@@ -11,7 +11,52 @@
     <p>
       Este simulador nos permite completar los datos de un formulario para inscribirse como revendedor de accesorios vendidos por el emprendimiento Familia JyC. En caso de que algún dato no sea correcto, se solicitará el reingreso y al finalizar, se muestra un resumen para la corroboración de dicha información.
     </p>
-
+    <main>
+      <section>
+        <form action="submit" method="post">
+            <label for="nombre">Nombre: </label>
+            <input type="text" name="nombre" id="nombre">
+            <label for="apellido">Apellido: </label>
+            <input type="text" name="apellido" id="apellido">
+            <label for="dni">D.N.I.:</label>
+            <input type="text" name="dni" id="dni">
+            <label for="ig">Instagram:</label>
+            <input type="text" name="ig" id="ig">
+            <label for="telefono">Teléfono:</label>
+            <input type="text" name="telefono" id="telefono">
+            <label for="canal-venta1">Canal de venta:</label>
+            <div class="canal-venta" id="canal">
+              <div>
+                  <input type="radio" name="canal-venta" id="canal-venta1">
+                  <label for="canal-venta1">Revendedora</label>
+              </div>
+              <div>
+                  <input type="radio" name="canal-venta" id="canal-venta2">
+                  <label for="canal-venta2">Local</label>
+              </div>
+              <div>
+                  <input type="radio" name="canal-venta" id="canal-venta3">
+                  <label for="canal-venta3">Online</label>
+              </div>
+            </div>
+            <label for="pais">País:
+              <select name="pais" id="pais">
+                <option value="Argentina">Argentina</option>
+                <option value="Bolivia">Bolivia</option>
+                <option value="Brasil">Brasil</option>
+                <option value="Chile">Chile</option>
+                <option value="Paraguay">Paraguay</option>
+                <option value="Uruguay">Uruguay</option>
+              </select>
+            </label>
+            <label for="mensaje">Dejanos tu mensaje:</label>
+            <textarea name="mensaje" id="mensaje"></textarea>
+          </form>
+          <button class="btn" id="enviar-resumen">Enviar</button>
+        </section>
+        <h3 class="h3-resumen">Resumen: ... </h3>
+        <section id="container-products"></section>
+      </main>
     <script src="./main.js"></script>
   </body>
 </html>

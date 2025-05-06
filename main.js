@@ -22,7 +22,7 @@ let resumen = [];
 alert("¡Bienvenida a nuestro formulario online para sumarte como revendedora!");
 
 //Nombre
-const nombre = prompt("Ingresa tu nombre")
+/* const nombre = prompt("Ingresa tu nombre")
 resumen.push(nombre)
 //Apellido
 const apellido = prompt("Ingresá tu apellido")
@@ -77,4 +77,27 @@ console.log(`Que bueno que te quieras sumar a nuestra familia ${nombre} ${apelli
     Canal de venta elegido: ${canal}\n 
     País: ${pais}\n
     Mensaje: ${mensaje}\n`
- )
+ ) */
+let nombre = document.getElementById("nombre").value;
+let apellido = document.getElementById("apellido").value;
+let dni = document.getElementById("dni").value;
+let ig = document.getElementById("ig").value;
+let telefono = document.getElementById("telefono").value;
+let canal = document.getElementById("canal").value;
+let pais = document.getElementById("pais").value;
+let mensaje = document.getElementById("mensaje").value;
+
+
+let botonEnviar = document.getElementById("enviar-resumen");
+let nodoResumen = document.querySelector(".h3-resumen");
+botonEnviar.addEventListener("click", () => {
+    nodoResumen.textContent = `Que bueno que te quieras sumar a nuestra familia ${nombre} ${apellido}.\n 
+    Esperamos haber tomado nota correctamente..\n
+    DNI: ${dni}\n
+    Instagram: ${ig}\n
+    Celular: ${telefono}\n
+    Canal de venta elegido: ${canal}\n
+    País: ${pais}\n
+    Mensaje: ${mensaje}\n
+  `;
+});
