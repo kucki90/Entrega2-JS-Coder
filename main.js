@@ -96,7 +96,33 @@ let apellido = document.getElementById("apellido").value;
 let dni = document.getElementById("dni").value;
 let ig = document.getElementById("ig").value;
 let telefono = document.getElementById("telefono").value;
-const seleccionado = document.querySelector('input[name="canal-venta"]:checked');
+// Obtener el radio button seleccionado
+
+const seleccionado = document.querySelector(
+
+    'input[name="canal-venta"]:checked'
+    
+    );
+    
+    // Obtener el texto del canal de venta seleccionado
+    
+    let canalVentaTexto = "";
+    
+    if (seleccionado) {
+    
+    // Obtener el texto de la etiqueta asociada al radio button
+    
+    const labelFor = seleccionado.id;
+    
+    const label = document.querySelector(`label[for="${labelFor}"]`);
+    
+    canalVentaTexto = label ? label.textContent : "No seleccionado";
+    
+    } else {
+    
+    canalVentaTexto = "No seleccionado";
+    
+    }
 /* let canal = document.getElementById("canal").value; */
 let pais = document.getElementById("pais").value;
 let mensaje = document.getElementById("mensaje").value;
@@ -105,7 +131,7 @@ let mensaje = document.getElementById("mensaje").value;
     DNI: ${dni}\n
     Instagram: ${ig}\n
     Celular: ${telefono}\n
-    Canal de venta elegido: ${seleccionado.id}\n
+    Canal de venta elegido: ${canalVentaTexto}\n
     País: ${pais}\n
     Mensaje: ${mensaje}\n
   `;
