@@ -1,0 +1,32 @@
+[
+  {
+    "nombre": "Cecilia Noemi",
+    "apellido": "Kuckiewicz",
+    "dni": "35161891",
+    "ig": "familia.jyc",
+    "telefono": "01128386542",
+    "canalVenta": "Local",
+    "pais": "Brasil",
+    "mensaje": "test1"
+  },
+  {
+    "nombre": "Juan",
+    "apellido": "Perez",
+    "dni": "11223344",
+    "ig": "juancito.perez",
+    "telefono": "11223344",
+    "canalVenta": "Local",
+    "pais": "Bolivia",
+    "mensaje": "test2"
+  },
+  {
+    "nombre": "josefa",
+    "apellido": "juarez",
+    "dni": "22334455",
+    "ig": "pepita.juarez",
+    "telefono": "3344556677",
+    "canalVenta": "Online",
+    "pais": "Brasil",
+    "mensaje": "test3"
+  }
+]
